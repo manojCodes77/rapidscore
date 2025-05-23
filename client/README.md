@@ -35,6 +35,16 @@ npm run reset-project
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
+## Installing Nativewind for css
+
+Nativewind is a utility-first CSS-in-JS library for React Native that allows you to use Tailwind CSS classes in your React Native components. It provides a set of utility functions and components that enable you to style your components using Tailwind CSS syntax.
+
+To install Nativewind, you can use the following links:
+
+- [Nativewind documentation](https://www.nativewind.dev/docs/getting-started/installation): This is the official documentation for Nativewind, which provides detailed instructions on how to install and use the library.
+
+- [My personal github repository](https://github.com/codermanoj2023/06-connecting-react-native-with-native-wind): This is my personal GitHub repository where I have created a sample project using Nativewind. You can check it out for the simplest implementation of Nativewind in a React Native project.
+
 ## Learn more
 
 To learn more about developing your project with Expo, look at the following resources:
