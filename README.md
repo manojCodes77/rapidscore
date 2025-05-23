@@ -52,14 +52,14 @@ A comprehensive real-time cricket scoring application built with React Native, F
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/cricket-scoring-app.git
-cd cricket-scoring-app
+git clone https://github.com/manojCodes77/rapidscore.git
+cd rapidscore
 ```
 
 #### 2. Backend Setup
 ```bash
 # Navigate to backend directory
-cd backend
+cd server
 
 # Install dependencies with Bun
 bun install
@@ -74,7 +74,7 @@ nano .env
 #### 3. Frontend Setup
 ```bash
 # Navigate to frontend directory
-cd ../frontend
+cd client
 
 # Install dependencies
 npm install
@@ -155,30 +155,24 @@ const connectDB = async () => {
 
 #### Start Backend Server
 ```bash
-cd backend
+cd server
 bun run dev
 # Server runs on http://localhost:3000
 ```
 
 #### Start React Native App
 ```bash
-cd frontend
+cd client
 
-# For Android
-npx react-native run-android
-
-# For iOS (macOS only)
-npx react-native run-ios
-
-# Or start Metro bundler separately
-npx react-native start
+#  start Metro bundler separately
+npx expo start
 ```
 
 ### Production Mode
 
 #### Backend Deployment
 ```bash
-cd backend
+cd server
 
 # Build the application
 bun run build
@@ -189,7 +183,7 @@ bun run start
 
 #### Frontend Build
 ```bash
-cd frontend
+cd client
 
 # Build for Android
 npx react-native run-android --variant=release
