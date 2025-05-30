@@ -53,7 +53,7 @@ export default function OtpScreen() {
       const otpString = otp.join("");
 
       const res = await axios.post(
-        "http://172.20.10.2:3000/api/auth/verify-otp",
+        `${process.env.EXPO_PUBLIC_API_URL}/api/auth/verify-otp`,
         {
           email,
           otp: otpString,
@@ -77,7 +77,7 @@ export default function OtpScreen() {
 
   const resendOtp = async () => {
     try {
-      await axios.post("http://172.20.10.2:3000/api/auth/send-otp", {
+      await axios.post(`${process.env.EXPO_PUBLIC_API_URL}/api/auth/send-otp`, {
         email,
       });
       setTimer(30);

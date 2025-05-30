@@ -31,7 +31,7 @@ export default function EmailScreen() {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://172.20.10.2:3000/api/auth/send-otp",
+        `${process.env.EXPO_PUBLIC_API_URL}/api/auth/send-otp`,
         { email }
       );
       if (res.status === 200) {
@@ -41,8 +41,9 @@ export default function EmailScreen() {
         Alert.alert("Error", res.data.message || "OTP sending failed");
       }
     } catch (err) {
-      console.error(err);
-      Alert.alert("Failed", "Failed to send verification code");
+      console.error(err.message);
+      // Alert.alert("Failed", "Failed to send verification code");
+      Alert.alert(err.response?.data?.message || "Failed to send verification code");
     } finally {
       setLoading(false);
     }

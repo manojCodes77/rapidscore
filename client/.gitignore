@@ -5,7 +5,7 @@ node_modules/
 
 .vscode/
 .env
-
+package-lock.json
 # Expo
 .expo/
 dist/
